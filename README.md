@@ -1,17 +1,7 @@
 <div id="1"><div>Biaya paket umroh 9 hari <b> All in Rp 33.000.000</b> (✅By Saudi Arabia | ✅Free Tha'if &amp; Kereta Cepat | ✅Hotel ⭐3 &amp; 4 | ✅Hotel dekat dengan Masjid Nabawi &amp; Masjidil Haram)</div>    
-    
- <!--more--> 
 
-  <h2 class="box blue" style="color: #065381; text-align: center;">Biaya dan Jadwal Paket Umroh Murah 9 Hari 2025</h2>
+<h2 class="box blue" style="color: #065381; text-align: center;">Biaya dan Jadwal Paket Umroh Murah 9 Hari 2025</h2>
 <p style="text-align: justify;"><a href="https://www.ajmalnoorwisata.co.id/2023/05/umroh-9-hari.html" style="background-color: #fdfdfd; box-sizing: border-box; font-family: &quot;Open Sauce One&quot;, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, &quot;Segoe UI&quot;, Oxygen-Sans, &quot;Helvetica Neue&quot;, Arial, sans-serif; font-size: 15.001px; margin: 0px; outline: none; text-decoration-line: none; transition: color 0.3s;">Biaya paket umroh 9 hari 2025</a><span face="&quot;Open Sauce One&quot;, system-ui, -apple-system, BlinkMacSystemFont, Ubuntu, &quot;Segoe UI&quot;, Oxygen-Sans, &quot;Helvetica Neue&quot;, Arial, sans-serif" style="background-color: #fdfdfd; color: #3a4a68; font-size: 15.001px;">&nbsp; merupakan salah satu program Umroh pilihan untuk menunaikan ibadah umroh ke tanah suci dilanjutkan berziarah ke makam baginda Nabi besar Muhammad ﷺ.</span></p>  
-  
-
- 
-
-  
-
-
-  
 
 <h3 class="box blue" style="color: #065381; text-align: center;">Hari 1: Keberangkatan dari Indonesia</h3>
  <div>  
@@ -111,6 +101,3 @@
 <li>Peserta umrah harus membawa dokumen yang diperlukan seperti visa Arab Saudi dan surat keterangan kesehatan (bila diperlukan.</li>
         </ul>
 </div>
-
-
-<div class="tagembed-widget" data-tags="false" data-widget-id="2070883" style="height: 100%; width: 100%;" view-url="https://widget.tagembed.com/2070883"></div><script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script></div></div>
