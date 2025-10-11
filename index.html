@@ -1,451 +1,356 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta name="google-site-verification" content="a7XFSUMRMyA9ARtIQBudn8e3E8TtsWhfx6iRU_2l1IY" />
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Travel Template — Ajmal Noor Wisata</title>
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    /* Interactive CSS */
-    :root{--accent:#0d6efd;--muted:#6c757d}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+  <head>
+    <meta name="google-site-verification" content="a7XFSUMRMyA9ARtIQBudn8e3E8TtsWhfx6iRU_2l1IY" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajmal Noor Wisata — Paket Umroh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+      :root{--brand:#6f1dff}
+      .hero{background:linear-gradient(90deg,rgba(111,29,255,0.95),rgba(97,43,217,0.95)), url('https://images.unsplash.com/photo-1523254328673-0a5b9a9b6c4b?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=') center/cover; color:white}
+      .package-card .price{font-size:1.25rem; font-weight:700; color:var(--brand)}
+      .floating-contact{position:fixed; right:20px; bottom:20px; z-index:1050}
+      footer{background:#0b1220;color:#cbd5e1}
+    </style>
+  </head>
+  <body>
 
-    /* Hero */
-    .hero{background-image:linear-gradient(90deg, rgba(13,110,253,0.08), rgba(0,0,0,0.02)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=');
-      background-size:cover;background-position:center;min-height:360px;display:flex;align-items:center}
-    .hero .card{backdrop-filter: blur(6px);background:rgba(255,255,255,0.72)}
-
-    /* Cards grid */
-    .trip-card{transition:transform .22s ease, box-shadow .22s ease; cursor:default}
-    .trip-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(13,110,253,0.12)}
-    .badge-duration{background:linear-gradient(90deg,var(--accent),#6610f2);color:white}
-
-    /* Filters */
-    .chip{padding:.35rem .7rem;border-radius:999px;border:1px solid rgba(13,110,253,.12);cursor:pointer;transition:all .18s}
-    .chip.active{background:var(--accent);color:#fff;transform:scale(1.03)}
-
-    /* Floating action */
-    .fab{position:fixed;right:18px;bottom:18px;background:var(--accent);color:white;border-radius:999px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(13,110,253,0.18);z-index:1050}
-
-    /* Responsive tweaks */
-    @media (max-width:576px){.hero{min-height:280px}.hero h1{font-size:1.6rem}}
-
-    /* subtle animated underline for CTA links */
-    a.cta{position:relative}
-    a.cta:after{content:'';position:absolute;left:0;right:0;height:2px;background:var(--accent);bottom:-2px;transform:scaleX(0);transform-origin:left center;transition:transform .22s}
-    a.cta:hover:after{transform:scaleX(1)}
-
-  </style>
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <i class="bi bi-globe2 fs-3 text-primary me-2"></i>
-      <div>
-        <div class="fw-bold">Ajmal Noor Wisata</div>
-        <small class="text-muted">Travel & Umroh</small>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ajmal Noor Wisata</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#paket">Paket</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cara-berangkat">Cara Berangkat</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
       </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    </nav>
 
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="#packages">Paket</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-        <li class="nav-item ms-2"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookModal">Book Now</button></li>
-      </ul>
+    <!-- HERO -->
+    <header class="hero py-5">
+      <div class="container text-center py-6">
+        <h1 class="display-5 fw-bold">Umroh Bersama Ajmal Noor Wisata</h1>
+        <p class="lead">Perjalanan spiritual yang tenang, terorganisir, dan aman. Pilih paket, isi data, kami urus sisanya.</p>
+        <div class="d-flex justify-content-center gap-2">
+          <a href="#paket" class="btn btn-light btn-lg">Lihat Paket</a>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#bookingModal">Pesan Sekarang</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- SEARCH & FILTER -->
+    <section class="py-4 bg-light">
+      <div class="container d-flex gap-3 flex-column flex-md-row align-items-center">
+        <div class="flex-grow-1 w-100">
+          <input id="searchInput" class="form-control" placeholder="Cari paket: mis. 'Riyadh', '14 hari', 'hemat'...">
+        </div>
+        <div>
+          <select id="filterDuration" class="form-select">
+            <option value="all">Semua Durasi</option>
+            <option value="8">8 Hari</option>
+            <option value="10">10 Hari</option>
+            <option value="14">14 Hari</option>
+          </select>
+        </div>
+        <div>
+          <select id="filterPrice" class="form-select">
+            <option value="all">Semua Harga</option>
+            <option value="low">&lt; Rp20.000.000</option>
+            <option value="mid">Rp20.000.000 - Rp35.000.000</option>
+            <option value="high">&gt; Rp35.000.000</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKET -->
+    <section id="paket" class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2>Pilihan Paket Umroh</h2>
+          <small class="text-muted">Klik "Detail" untuk info lengkap atau "Pesan" untuk memulai pemesanan</small>
+        </div>
+        <div class="row g-4" id="packageList">
+
+          <!-- package item (repeat) -->
+          <div class="col-md-6 col-lg-4 package-card" data-duration="10" data-price="32000000" data-keywords="makkah madinah riyadh 10 hari">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1505765056245-0a67f76b2b8b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Paket 10 Hari">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Umroh Premium 10 Hari</h5>
+                <p class="card-text">Hotel bintang 4-5 dekat Masjidil Haram & Masjid Nabawi. Transportasi nyaman, pembimbing berpengalaman.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="price">Rp32.000.000</div>
+                    <small class="text-muted">10 Hari</small>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal" data-title="Umroh Premium 10 Hari" data-desc="Termasuk tiket, penginapan, makan 3x, ziarah, visa, dan pembimbing." data-itinerary="Hari 1: Berangkat — Hari 2: tiba Makkah — ...">Detail</button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" data-package="Umroh Premium 10 Hari">Pesan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 package-card" data-duration="14" data-price="27000000" data-keywords="makkah madinah 14 hari hemat">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Paket 14 Hari">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Umroh Ekonomis 14 Hari</h5>
+                <p class="card-text">Pilihan anggaran terbaik tanpa mengurangi fasilitas utama — cocok untuk jamaah keluarga.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="price">Rp27.000.000</div>
+                    <small class="text-muted">14 Hari</small>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal" data-title="Umroh Ekonomis 14 Hari" data-desc="Termasuk akomodasi kelas menengah, transportasi, dan layanan visa." data-itinerary="Hari 1: Berangkat — Hari 2: tiba — ...">Detail</button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" data-package="Umroh Ekonomis 14 Hari">Pesan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 package-card" data-duration="8" data-price="18000000" data-keywords="makkah 8 hari singkat murah">
+            <div class="card h-100 shadow-sm">
+              <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Paket 8 Hari">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Umroh Express 8 Hari</h5>
+                <p class="card-text">Cocok untuk jamaah sibuk yang ingin kunjungan singkat namun bermakna.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="price">Rp18.000.000</div>
+                    <small class="text-muted">8 Hari</small>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal" data-title="Umroh Express 8 Hari" data-desc="Paket singkat - tiket PP, hotel, transportasi lokal." data-itinerary="Hari 1: Berangkat — Hari 2: tiba — ...">Detail</button>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal" data-package="Umroh Express 8 Hari">Pesan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ & CARA BERANGKAT -->
+    <section id="cara-berangkat" class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h3>Cara Berangkat</h3>
+            <ol>
+              <li>Pilih paket dan isi formulir pemesanan</li>
+              <li>Bayar deposit, kami proses visa & tiket</li>
+              <li>Briefing jamaah & keberangkatan</li>
+            </ol>
+            <a href="#bookingModal" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#bookingModal">Mulai Pesan</a>
+          </div>
+          <div class="col-md-6">
+            <h3 id="faq">FAQ</h3>
+            <div class="accordion" id="faqAcc">
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Apakah tiket pesawat termasuk?</button></h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Untuk paket tertentu tiket termasuk — cek detail paket.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Bagaimana proses visa?</button></h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Kami membantu pengurusan visa sesuai kelengkapan dokumen yang Anda berikan.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & MAP -->
+    <section id="kontak" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <h3>Kontak Kami</h3>
+            <p>Ajmal Noor Wisata — Booking & Info</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-telephone"></i> +62 812-3456-7890</li>
+              <li><i class="bi bi-envelope"></i> info@ajmalnoorwisata.id</li>
+              <li><i class="bi bi-geo-alt"></i> Jakarta, Indonesia</li>
+            </ul>
+            <form id="contactForm" class="row g-2 needs-validation" novalidate>
+              <div class="col-12"><input name="name" class="form-control" placeholder="Nama" required></div>
+              <div class="col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
+              <div class="col-md-6"><input name="phone" class="form-control" placeholder="No. Telepon" required></div>
+              <div class="col-12"><textarea name="message" class="form-control" rows="3" placeholder="Pesan" required></textarea></div>
+              <div class="col-12"><button class="btn btn-primary">Kirim</button></div>
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <h3>Lokasi (Contoh: Ka'bah)</h3>
+            <div class="ratio ratio-16x9 shadow-sm rounded">
+              <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=21.4225,39.8262&z=15&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 mt-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>© <strong>Ajmal Noor Wisata</strong> <small class="text-muted">2025</small></div>
+        <div>
+          <a class="text-decoration-none text-muted me-3" href="#">Syarat & Ketentuan</a>
+          <a class="text-decoration-none text-muted" href="#">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING CONTACT -->
+    <div class="floating-contact">
+      <a class="btn btn-success btn-lg rounded-circle shadow" href="https://wa.me/6281234567890?text=Assalamualaikum%20Ajmal%20Noor%20Wisata,%20saya%20ingin%20tanya%20paket%20umroh" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
     </div>
-  </div>
-</nav>
 
-<!-- HERO -->
-<header class="hero text-dark">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-7">
-        <div class="card p-4 border-0 shadow-sm">
-          <h1 class="mb-2">Jelajahi dunia — pengalaman tak terlupakan</h1>
-          <p class="lead text-muted">Pilih paket perjalanan yang pas: budaya, petualangan, pantai, atau perjalanan spiritual.</p>
+    <!-- DETAIL MODAL -->
+    <div class="modal fade" id="detailModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Detail Paket</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalDesc"></p>
+            <h6>Itinerary</h6>
+            <p id="modalItinerary"></p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookingModal" data-bs-dismiss="modal">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <form id="searchForm" class="row g-2 align-items-center">
-            <div class="col-sm-6 col-md-5">
-              <input id="searchInput" class="form-control" placeholder="Cari tempat, kota, paket..." aria-label="search">
+    <!-- BOOKING MODAL -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form id="bookingForm" class="needs-validation" novalidate>
+            <div class="modal-header">
+              <h5 class="modal-title">Form Pemesanan</h5>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="col-sm-4 col-md-4">
-              <select id="regionSelect" class="form-select">
-                <option value="all">Semua Region</option>
-                <option value="java">Java</option>
-                <option value="bali">Bali & Nusa</option>
-                <option value="nusa-tenggara">Nusa Tenggara</option>
-                <option value="umroh">Umroh</option>
-              </select>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label">Paket</label>
+                <input id="bookingPackage" name="package" class="form-control" readonly>
+              </div>
+              <div class="mb-3 row g-2">
+                <div class="col-md-6"><input name="name" class="form-control" placeholder="Nama Lengkap" required></div>
+                <div class="col-md-6"><input name="email" type="email" class="form-control" placeholder="Email" required></div>
+                <div class="col-md-6 mt-2"><input name="phone" class="form-control" placeholder="No. Telepon" required></div>
+                <div class="col-md-6 mt-2"><input name="passports" class="form-control" placeholder="No. Paspor (jika ada)"></div>
+              </div>
+              <div class="form-text mt-2">Isi data dengan lengkap. Tim kami akan menghubungi untuk konfirmasi lebih lanjut.</div>
             </div>
-            <div class="col-sm-2 col-md-3 d-grid">
-              <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i> Cari</button>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+              <button class="btn btn-primary" type="submit">Kirim Pemesanan</button>
             </div>
           </form>
-
-          <div class="mt-3">
-            <span class="chip active" data-region="all">All</span>
-            <span class="chip ms-2" data-region="java">Java</span>
-            <span class="chip ms-2" data-region="bali">Bali</span>
-            <span class="chip ms-2" data-region="nusa-tenggara">Nusa Tenggara</span>
-            <span class="chip ms-2" data-region="umroh">Umroh</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5 d-none d-lg-block">
-        <div class="card border-0 shadow-sm p-3 text-center">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="img-fluid rounded" alt="hero travel">
-          <p class="small mt-2 text-muted">Foto: Unsplash</p>
         </div>
       </div>
     </div>
-  </div>
-</header>
 
-<!-- PACKAGES -->
-<section id="packages" class="py-5">
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="h4 mb-0">Paket Populer</h2>
-      <a href="#" class="cta small text-decoration-none">Lihat Semua Paket →</a>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{
+        const href=a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault(); document.querySelector(href)?.scrollIntoView({behavior:'smooth'});
+        }
+      }));
 
-    <div id="cardsGrid" class="row g-4">
-      <!-- PACKAGE 1 -->
-      <div class="col-md-6 col-lg-4" data-region="java" data-title="Jakarta Getaway">
-        <div class="card trip-card h-100">
-          <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Jakarta">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Jakarta Getaway</h5>
-            <p class="card-text text-muted small">3 hari • 2 malam — City tour, kuliner & museum</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div>
-                <span class="badge badge-duration rounded-pill px-2 py-1">3D/2N</span>
-              </div>
-              <div class="text-end">
-                <div class="fw-bold">IDR 1.450.000</div>
-                <small class="text-muted">/orang (all in)</small>
-              </div>
-            </div>
-            <div class="mt-3 d-flex gap-2">
-              <button class="btn btn-outline-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-package="Jakarta Getaway">View details</button>
-              <button class="btn btn-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#bookModal" data-package="Jakarta Getaway">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      // Populate detail modal
+      const detailModal = document.getElementById('detailModal');
+      detailModal.addEventListener('show.bs.modal', e => {
+        const btn = e.relatedTarget;
+        if(!btn) return;
+        const title = btn.getAttribute('data-title');
+        const desc = btn.getAttribute('data-desc');
+        const itinerary = btn.getAttribute('data-itinerary');
+        detailModal.querySelector('.modal-title').textContent = title;
+        document.getElementById('modalDesc').textContent = desc;
+        document.getElementById('modalItinerary').textContent = itinerary;
+      });
 
-      <!-- PACKAGE 2 -->
-      <div class="col-md-6 col-lg-4" data-region="bali" data-title="Bali Beach Escape">
-        <div class="card trip-card h-100">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Bali">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Bali Beach Escape</h5>
-            <p class="card-text text-muted small">5 hari • 4 malam — Pantai, snorkel & spa</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div>
-                <span class="badge badge-duration rounded-pill px-2 py-1">5D/4N</span>
-              </div>
-              <div class="text-end">
-                <div class="fw-bold">IDR 3.250.000</div>
-                <small class="text-muted">/orang (double)</small>
-              </div>
-            </div>
-            <div class="mt-3 d-flex gap-2">
-              <button class="btn btn-outline-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-package="Bali Beach Escape">View details</button>
-              <button class="btn btn-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#bookModal" data-package="Bali Beach Escape">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      // Pre-fill booking modal when opened from package or 'Pesan' buttons
+      const bookingModal = document.getElementById('bookingModal');
+      bookingModal.addEventListener('show.bs.modal', e => {
+        const btn = e.relatedTarget;
+        const pkg = btn?.getAttribute('data-package') || 'Pemesanan Umroh';
+        document.getElementById('bookingPackage').value = pkg;
+      });
 
-      <!-- PACKAGE 3 -->
-      <div class="col-md-6 col-lg-4" data-region="java" data-title="Yogyakarta Culture Trip">
-        <div class="card trip-card h-100">
-          <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Yogyakarta">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Yogyakarta Culture Trip</h5>
-            <p class="card-text text-muted small">4 hari • 3 malam — Candi, desa batik & kuliner</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div>
-                <span class="badge badge-duration rounded-pill px-2 py-1">4D/3N</span>
-              </div>
-              <div class="text-end">
-                <div class="fw-bold">IDR 2.100.000</div>
-                <small class="text-muted">/orang</small>
-              </div>
-            </div>
-            <div class="mt-3 d-flex gap-2">
-              <button class="btn btn-outline-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-package="Yogyakarta Culture Trip">View details</button>
-              <button class="btn btn-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#bookModal" data-package="Yogyakarta Culture Trip">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      // Basic form validation (bootstrap)
+      (function(){
+        'use strict';
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form=>{
+          form.addEventListener('submit', function(event){
+            if(!form.checkValidity()){
+              event.preventDefault(); event.stopPropagation();
+            } else {
+              event.preventDefault(); // demo: replace with ajax or real submit
+              // Show success feedback
+              const modal = bootstrap.Modal.getInstance(document.querySelector('.modal.show'));
+              if(modal) modal.hide();
+              alert('Terima kasih! Data Anda telah diterima. Tim kami akan menghubungi Anda. (Demo)');
+              form.reset();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      })();
 
-      <!-- PACKAGE 4 -->
-      <div class="col-md-6 col-lg-4" data-region="nusa-tenggara" data-title="Komodo Adventure">
-        <div class="card trip-card h-100">
-          <img src="https://images.unsplash.com/photo-1505765056324-8b8f3d0d3a5c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Komodo">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Komodo Adventure</h5>
-            <p class="card-text text-muted small">3 hari • 2 malam — Trekking, boat trip & snorkel</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div>
-                <span class="badge badge-duration rounded-pill px-2 py-1">3D/2N</span>
-              </div>
-              <div class="text-end">
-                <div class="fw-bold">IDR 4.750.000</div>
-                <small class="text-muted">/orang (program lengkap)</small>
-              </div>
-            </div>
-            <div class="mt-3 d-flex gap-2">
-              <button class="btn btn-outline-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-package="Komodo Adventure">View details</button>
-              <button class="btn btn-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#bookModal" data-package="Komodo Adventure">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      // Search & filter packages
+      const searchInput = document.getElementById('searchInput');
+      const filterDuration = document.getElementById('filterDuration');
+      const filterPrice = document.getElementById('filterPrice');
+      const packageList = document.getElementById('packageList');
 
-      <!-- PACKAGE 5 -->
-      <div class="col-md-6 col-lg-4" data-region="umroh" data-title="Umroh Spiritual Journey">
-        <div class="card trip-card h-100">
-          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="card-img-top" alt="Umroh">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Umroh Spiritual Journey</h5>
-            <p class="card-text text-muted small">9 hari • 8 malam — Termasuk ziarah & pembimbing</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div>
-                <span class="badge badge-duration rounded-pill px-2 py-1">9D/8N</span>
-              </div>
-              <div class="text-end">
-                <div class="fw-bold">IDR 22.500.000</div>
-                <small class="text-muted">/orang (estimasi)</small>
-              </div>
-            </div>
-            <div class="mt-3 d-flex gap-2">
-              <button class="btn btn-outline-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-package="Umroh Spiritual Journey">View details</button>
-              <button class="btn btn-primary btn-sm flex-grow-1" data-bs-toggle="modal" data-bs-target="#bookModal" data-package="Umroh Spiritual Journey">Book</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-4 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <h3>Tentang Ajmal Noor Wisata</h3>
-        <p class="text-muted">Kami adalah biro perjalanan yang fokus pada pengalaman berkualitas — dari paket wisata domestik hingga umroh dan perjalanan spiritual. Layanan kami meliputi akomodasi, transport, pemandu lokal, dan layanan 24/7 saat perjalanan.</p>
-        <ul class="list-unstyled small">
-          <li><i class="bi bi-check2-circle text-success me-2"></i>Izin resmi, terpercaya</li>
-          <li><i class="bi bi-check2-circle text-success me-2"></i>Pilihan hotel &aan fleksibel</li>
-          <li><i class="bi bi-check2-circle text-success me-2"></i>Pembimbing berpengalaman</li>
-        </ul>
-      </div>
-      <div class="col-md-6 text-center">
-        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=" class="img-fluid rounded" alt="about">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h4>Kontak & Pertanyaan</h4>
-    <div class="row mt-3">
-      <div class="col-md-6">
-        <form id="contactForm" class="row g-2">
-          <div class="col-12"><input class="form-control" placeholder="Nama" required></div>
-          <div class="col-md-6"><input class="form-control" placeholder="Email" type="email" required></div>
-          <div class="col-md-6"><input class="form-control" placeholder="Telepon" required></div>
-          <div class="col-12"><textarea class="form-control" rows="4" placeholder="Tanya / Pesan"></textarea></div>
-          <div class="col-12 d-grid"><button class="btn btn-primary">Kirim Pesan</button></div>
-        </form>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-3 border-0 shadow-sm">
-          <h6>Alamat</h6>
-          <p class="small text-muted mb-1">Jl. Contoh No.1, Jakarta</p>
-          <p class="small text-muted mb-1">Email: info@ajmalnoorwisata.co.id</p>
-          <p class="small text-muted">Telp: +62 21 555 1234</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-4 bg-white border-top">
-  <div class="container d-flex justify-content-between small">
-    <div>&copy; <span id="year"></span> Ajmal Noor Wisata</div>
-    <div>Made with <i class="bi bi-heart-fill text-danger"></i></div>
-  </div>
-</footer>
-
-<!-- FLOAT BUTTON -->
-<a class="fab" href="#contact" title="Contact us">
-  <i class="bi bi-chat-dots fs-4"></i>
-</a>
-
-<!-- DETAIL MODAL -->
-<div class="modal fade" id="detailModal" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Package details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <h6 id="modalTitle">Loading...</h6>
-        <p class="text-muted small" id="modalShort">—</p>
-
-        <div class="accordion" id="itineraryAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day1">Itinerary (Contoh)</button>
-            </h2>
-            <div id="day1" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
-              <div class="accordion-body small text-muted">Hari 1: Kedatangan, city tour singkat, check-in hotel.</div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-        <h6>What's included</h6>
-        <ul class="small text-muted">
-          <li>Hotel</li>
-          <li>Transportasi</li>
-          <li>Pemandu lokal</li>
-          <li>Makan sesuai itinerary</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-primary" data-bs-target="#bookModal" data-bs-toggle="modal">Book Now</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- BOOKING MODAL -->
-<div class="modal fade" id="bookModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Booking</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <form id="bookingForm" class="row g-2">
-          <div class="col-12"><input id="pkgName" class="form-control" readonly></div>
-          <div class="col-md-6"><input class="form-control" placeholder="Nama Lengkap" required></div>
-          <div class="col-md-6"><input class="form-control" placeholder="No. Telp" required></div>
-          <div class="col-12"><input class="form-control" type="email" placeholder="Email" required></div>
-          <div class="col-12"><select class="form-select"><option>1 Pax</option><option>2 Pax</option><option>3 Pax</option></select></div>
-          <div class="col-12 d-grid"><button class="btn btn-primary">Submit Booking</button></div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SCRIPTS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // Utilities
-  document.getElementById('year').innerText = new Date().getFullYear();
-
-  // Populate detail modal based on data-package attribute
-  var detailModal = document.getElementById('detailModal');
-  detailModal.addEventListener('show.bs.modal', function (event) {
-    var button = event.relatedTarget;
-    var pkg = button.getAttribute('data-package') || 'Package';
-    document.getElementById('modalTitle').innerText = pkg;
-    document.getElementById('modalShort').innerText = 'Contoh deskripsi singkat untuk ' + pkg + '. Durasi, highlight, dan informasi praktis.';
-  });
-
-  // When opening booking modal, set package name if available
-  var bookModal = document.getElementById('bookModal');
-  bookModal.addEventListener('show.bs.modal', function(event){
-    var trigger = event.relatedTarget;
-    var name = trigger ? (trigger.getAttribute('data-package') || '') : '';
-    document.getElementById('pkgName').value = name;
-  });
-
-  // Filter chips behavior
-  document.querySelectorAll('.chip').forEach(function(chip){
-    chip.addEventListener('click', function(){
-      document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-      chip.classList.add('active');
-      var region = chip.getAttribute('data-region');
-      filterPackages(region, document.getElementById('searchInput').value.trim());
-    });
-  });
-
-  // Search form behavior
-  document.getElementById('searchForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var q = document.getElementById('searchInput').value.trim();
-    var region = document.getElementById('regionSelect').value;
-    // sync chips
-    document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
-    document.querySelector('.chip[data-region="'+region+'"]')?.classList.add('active');
-    filterPackages(region, q);
-  });
-
-  function filterPackages(region, q){
-    q = (q||'').toLowerCase();
-    document.querySelectorAll('#cardsGrid > div').forEach(function(card){
-      var r = card.getAttribute('data-region');
-      var t = (card.getAttribute('data-title')||'').toLowerCase();
-      var matchRegion = (region==='all' || region===null) ? true : (r===region);
-      var matchQuery = q==='' ? true : (t.indexOf(q) !== -1);
-      if(matchRegion && matchQuery){
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
+      function applyFilters(){
+        const q = searchInput.value.trim().toLowerCase();
+        const dur = filterDuration.value;
+        const price = filterPrice.value;
+        document.querySelectorAll('.package-card').forEach(card=>{
+          const txt = (card.getAttribute('data-keywords')||'') + ' ' + (card.querySelector('.card-title')?.textContent||'');
+          const duration = card.getAttribute('data-duration');
+          const priceVal = parseInt(card.getAttribute('data-price'),10);
+          let show = true;
+          if(q && !txt.toLowerCase().includes(q)) show = false;
+          if(dur!=='all' && duration!==dur) show = false;
+          if(price==='low' && !(priceVal < 20000000)) show = false;
+          if(price==='mid' && !(priceVal >= 20000000 && priceVal <= 35000000)) show = false;
+          if(price==='high' && !(priceVal > 35000000)) show = false;
+          card.style.display = show ? '' : 'none';
+        });
       }
-    });
-  }
+      [searchInput, filterDuration, filterPrice].forEach(el=>el.addEventListener('input', applyFilters));
 
-  // Small UX: close detail modal when booking opens
-  var detailModalEl = document.getElementById('detailModal');
-  detailModalEl.addEventListener('hide.bs.modal', function(){});
-
-  // Contact & booking forms: prevent actual submission for demo
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Terima kasih! Pesan Anda telah diterima — (demo).');
-    this.reset();
-  });
-  document.getElementById('bookingForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Booking diterima — (demo). Kami akan menghubungi Anda.');
-    var m = bootstrap.Modal.getInstance(bookModal);
-    m.hide();
-    this.reset();
-  });
-
-  // Initialize: ensure all shown
-  filterPackages('all', '');
-</script>
-</body>
+    </script>
+  </body>
 </html>
