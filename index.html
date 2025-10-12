@@ -2,87 +2,103 @@
 <html lang="id">
 <head>
   <meta name="google-site-verification" content="a7XFSUMRMyA9ARtIQBudn8e3E8TtsWhfx6iRU_2l1IY" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Travel Umroh Jakarta 2025 - Ajmal Noor Wisata</title>
-  <meta name="description" content="Ajmal Noor Wisata adalah travel umroh resmi di Jakarta yang menawarkan paket umroh 9 hari, umroh 12 hari, dan umroh private keluarga dengan pelayanan profesional, harga terjangkau, dan bimbingan ibadah lengkap.">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Ajmal Noor Wisata adalah travel umroh resmi di Jakarta yang menawarkan paket umroh 9 hari, umroh 12 hari, dan umroh private keluarga dengan pelayanan profesional, harga terjangkau, dan bimbingan ibadah lengkap." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
     :root {
       --primary-color: #0d1b4c; /* biru tua */
       --accent-color: #d4af37;  /* emas */
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.8;
       color: #333;
       background-color: #fff;
     }
+
     header {
       background: linear-gradient(rgba(13, 27, 76, 0.7), rgba(13, 27, 76, 0.7)),
-                  url('https://media.istockphoto.com/id/966303402/id/foto/pemandangan-malam-kabba.jpg?s=2048x2048&w=is&k=20&c=h-cHNs_OXb1nzAzzTJyZLnxFy0YRQosXhydr9Rnh0hE=') center/cover no-repeat;
+                  url('https://dc597.4shared.com/img/liyD2YYhge/s24/199d7ea65d8/kabah_hd?async=&rand=0.48235952599702636') center/cover no-repeat;
       color: #fff;
       padding: 100px 20px;
       text-align: center;
     }
+
     header h1 {
       font-weight: 700;
       color: var(--accent-color);
     }
+
     article {
       padding: 60px 15px;
     }
+
     article h2 {
       color: var(--primary-color);
       font-weight: 700;
       margin-top: 30px;
       margin-bottom: 15px;
     }
+
     .gallery img {
       border-radius: 15px;
       transition: transform 0.3s ease;
     }
+
     .gallery img:hover {
       transform: scale(1.05);
     }
+
     .cta {
       background-color: var(--primary-color);
       color: #fff;
       padding: 50px 15px;
       text-align: center;
     }
+
     .cta .btn {
       background-color: var(--accent-color);
       color: var(--primary-color);
       font-weight: 600;
     }
+
     .cta .btn:hover {
       background-color: #c19b2e;
       color: #fff;
     }
+
     footer {
       background-color: var(--primary-color);
       color: #fff;
       padding: 20px 10px;
       text-align: center;
     }
+
     footer a {
       color: var(--accent-color);
       text-decoration: none;
     }
-    /* Testimoni */
+
     .testimonial {
       background-color: #f8f9fa;
       padding: 60px 20px;
     }
+
     .testimonial .card {
       border: 1px solid #ddd;
       border-radius: 15px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+
     .testimonial .card-body {
       text-align: center;
     }
+
     .testimonial .card-body img {
       width: 80px;
       height: 80px;
@@ -90,15 +106,66 @@
       object-fit: cover;
       margin-bottom: 15px;
     }
+
     .testimonial h5 {
       color: var(--primary-color);
       font-weight: 600;
     }
+
     .map-container {
       border: 3px solid var(--accent-color);
       border-radius: 15px;
       overflow: hidden;
       margin: 40px 0;
+    }
+
+    /* FAQ Section */
+    #faq {
+      background-color: #f9f9f9;
+      padding: 60px 15px;
+    }
+
+    .ajmal-faq-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .ajmal-faq-item:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .ajmal-faq-question {
+      font-weight: 600;
+      color: var(--primary-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ajmal-faq-answer {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .ajmal-faq-item.active .ajmal-faq-answer {
+      display: block;
+    }
+
+    .ajmal-faq-toggle {
+      color: var(--accent-color);
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .ajmal-faq-item.active .ajmal-faq-toggle {
+      transform: rotate(45deg);
     }
   </style>
 </head>
@@ -118,34 +185,39 @@
     <ul>
       <li>✅ Visa umroh resmi dan keberangkatan sesuai jadwal</li>
       <li>✅ Bimbingan manasik lengkap sebelum keberangkatan</li>
-      <li>✅ Hotel bintang 4–5 dekat Masjidil Haram dan Nabawi</li>
+      <li>✅ Hotel bintang 3–5 dekat Masjidil Haram dan Nabawi</li>
       <li>✅ Pembimbing dan tour leader berpengalaman</li>
     </ul>
 
-    <h2>2. Paket Umroh Jakarta 2025</h2>
+    <h2>2. Paket Umroh Start Jakarta</h2>
     <ul>
       <li><strong><a href="https://www.ajmalnoorwisata.co.id/2023/05/umroh-9-hari.html" target="_blank">Paket Umroh 9 Hari</a>:</strong> Fokus ibadah dengan fasilitas hotel nyaman dan transportasi eksklusif.</li>
       <li><strong><a href="https://www.ajmalnoorwisata.co.id/2023/05/paket-umroh-12-hari.html" target="_blank">Paket Umroh 12 Hari</a>:</strong> Perjalanan lebih panjang untuk memperbanyak ibadah dan ziarah ke tempat bersejarah di Makkah & Madinah.</li>
       <li><strong><a href="https://www.ajmalnoorwisata.co.id/2023/06/umroh-private.html" target="_blank">Paket Umroh Private Keluarga</a>:</strong> Khusus bagi keluarga yang ingin pengalaman ibadah lebih privat, fleksibel, dan personal.</li>
     </ul>
 
-    <h2>3. Lokasi Kantor Travel Umroh Jakarta</h2>
+   <h2>3. Lokasi Kantor Pusat Jakarta</h2>
     <p><strong>Kantor pusat kami berlokasi di:</strong> Ruko Wisma Griya Intan Jl. Hj. Tutty Alawiyah No.21 B, RT.1/RW.7, Pejaten Bar., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12510.</p>
 
-    <div class="map-container">
-      
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.889362486725!2d106.83012450000001!3d-6.278273899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3a0e0e0bf87%3A0x941de19859024240!2sAjmal%20Noor%20Wisata%20-%20Travel%20Umroh%20%26%20Haji!5e0!3m2!1sid!2sid!4v1760248909229!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map-container"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.889362486725!2d106.83012450000001!3d-6.278273899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3a0e0e0bf87%3A0x941de19859024240!2sAjmal%20Noor%20Wisata%20-%20Travel%20Umroh%20%26%20Haji!5e0!3m2!1sid!2sid!4v1760248909229!5m2!1sid!2sid" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <h2>4. Galeri Perjalanan Umroh</h2>
+<h2>4. Lokasi Kantor Cabang Madura</h2>
+    <p><strong>Kantor pusat kami berlokasi di:</strong> Jalan Raya Pasar Lenteng (Selatan Lapang Sepakat) Kecamatan Lenteng, Kabupaten Sumenep - Madura, Jawa Timur 69461</p>
+
+    <div class="map-container"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.797713584002!2d113.77655137574071!3d-7.033046568906884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e76a26a63a77%3A0xa719b1f985d17b9!2sAjmal%20Noor%20Wisata%20-%20Travel%20Umroh%20%26%20Haji%20Cab%20Sumenep!5e0!3m2!1sid!2sid!4v1760264270901!5m2!1sid!2sid"width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy""></iframe>
+    </div>
+
+
+    <h2>5. Galeri Perjalanan Umroh</h2>
     <div class="row g-3 gallery my-4">
-      <div class="col-6 col-md-3"><img src="https://lh3.googleusercontent.com/p/AF1QipN51h6O0PrxHRzQDvW4vVSDo5i5hJA_x03mQdA9=w400-h300-k-no" class="img-fluid" alt="Jamaah Umroh di Makkah"></div>
-      <div class="col-6 col-md-3"><img src="https://lh3.googleusercontent.com/gpms-cs-s/AB8u6HZNe1w_JXDqPHqM-Uh-YM8lUyqwFRtWJ9kSMVJCCm0PpHcd6jQHhbLI-lzKkrJuYADg6SWA7Oy9nzGlb4JsMrbxXE-NL4zbQwbWiFP_CapvDmAJ-MM71zQ5tklWRiz5pp-R2dno=w400-h533-k-no" class="img-fluid" alt="Masjidil Haram Malam Hari"></div>
-      <div class="col-6 col-md-3"><img src="https://lh3.googleusercontent.com/p/AF1QipPYorKak6V0ajcUYVGyTDODiKN_MPH7LSLMxlnK=w400-h225-k-no" class="img-fluid" alt="Ka'bah dari Dekat"></div>
-      <div class="col-6 col-md-3"><img src="https://lh3.googleusercontent.com/gpms-cs-s/AB8u6Ha9ydOUMFGf1PsVme6U0MBvUybo9TaECSDFnSkASF-HAwhmUbmrIBNFaV4RQ455rezBFFuYv2NN4w1fSBWJS_hGbY69kxEk1Ar-JT_T_Jyjzv3E1rB9LXJZr5ZJGV1rdl0YfyA3=w400-h533-k-no" class="img-fluid" alt="Jamaah di Masjid Nabawi"></div>
+      <div class="col-6 col-md-3"><img src="https://dc737.4shared.com/img/rIpjGGDIjq/s24/199d8c3aaf0/jamaah-di-makkah?async&rand=0.41041118327169945" class="img-fluid" alt="Jamaah Umroh di Makkah"></div>
+      <div class="col-6 col-md-3"><img src="https://dc737.4shared.com/img/qRYGsDZUku/s24/199d8c3a320/jamaah-ajmal-noor-wisata?async&rand=0.8687717166082674" class="img-fluid" alt="MJamaah di jabal Uhud"></div>
+      <div class="col-6 col-md-3"><img src="https://dc737.4shared.com/img/I2tEL1IZku/s24/199d8c39380/kabah-dari-dekat?async&rand=0.503211540626037" class="img-fluid" alt="Ka'bah dari Dekat"></div>
+      <div class="col-6 col-md-3"><img src="https://dc737.4shared.com/img/lRsss1_Ufa/s24/199d8c3b2c0/jamaah-di-masjid-nabawi?async&rand=0.6744091701077249" class="img-fluid" alt="Jamaah di Masjid Nabawi"></div>
     </div>
 
-    <h2>5. Testimoni Jamaah</h2>
+    <h2>6. Testimoni Jamaah</h2>
   </article>
 
   <section class="testimonial">
@@ -159,7 +231,7 @@
                 <img src="https://lh3.googleusercontent.com/gpms-cs-s/AB8u6Hb-rrK8ewTXoqck_4EnHFYRU8A6aN3WZFWBQ2np59UfXrdLrMhXtFRskgw424CDF97JBD_uBf18KYJovdze76CSU2Il_A7QqUT9Zs1v1QNtGs1tb5lsSLNbFeNPj3qGKsWApVij=w400-h533-k-no" alt="Jamaah Umroh">
                 <p>⭐⭐⭐⭐⭐</p>
                 <p>"Alhamdulillah bisa umroh bersama Ajmal Noor Wisata, 12 hari bersama travel yg dalam pelayanan nya sangat baik, ramah dan perhatian........."</p>
-                <h5>- Murnasih Murnasih</h5>
+                <h5>- Ibu Murnasih</h5>
               </div>
             </div>
           </div>
@@ -170,7 +242,7 @@
                 <img src="https://lh3.googleusercontent.com/gpms-cs-s/AB8u6HZGcD4_KE0ehD1Y8lFEhE5YtB1clDAEnjT_PcrjGozejeY3Udz5aqLpKaGNo46sFmML_SbDo_YZELt7f0pwdKiCiE0whJnclVm090Yr_XdhGfL37e_zH9O1u5sdtRN3GKiQdVf61w=w400-h533-k-no" alt="Jamaah Umroh">
                 <p>⭐⭐⭐⭐⭐</p>
                 <p>"Terimakasih Ajmal Noor Wisata sdh memudah kan dan membimbing ke dua orang tua saya dalam menjalan kan ibadah umroh nya, terus maju........."</p>
-                <h5>- SYanah Sury</h5>
+                <h5>- ibu Yanah</h5>
               </div>
             </div>
           </div>
@@ -181,7 +253,7 @@
                 <img src="https://lh3.googleusercontent.com/gpms-cs-s/AB8u6HZAnjYcSZi5_fmDYNiXAzLK8b754ZQ3JzCUb8lZw45WmuiTYtNZ7LImkuw0gkRE2m8inclEGrWm2OApYrTpq4gz4Xy3az8EXY5xthQVKIPYW8YwaAQygti51xWgZxZmwJg8LYUv=w400-h533-k-no">
                 <p>⭐⭐⭐⭐⭐</p>
                 <p>"Ajmal Noor Wisata memang oke, pelayanannya bagus sehingga Saya dapat beribadah dengan nyaman baik di Madinah & Makkah....................."</p>
-                <h5>- Rachmatulloh</h5>
+                <h5>-Bpk Rachmatulloh</h5>
               </div>
             </div>
           </div>
@@ -198,9 +270,65 @@
     </div>
   </section>
 
+  <!-- FAQ Gabungan -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="text-center mb-4">🕋 Pertanyaan yang Sering Diajukan pada Travel Umroh</h2>
+<p class="ajmal-faq-intro">Berikut daftar pertanyaan umum yang sering diajukan calon jamaah kepada <b>Ajmal Noor Wisata.</b> Klik setiap pertanyaan untuk melihat jawabannya.</p>
+
+
+      <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Apakah travel umroh ini terdaftar resmi di Kementerian Agama?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Ya, Ajmal Noor Wisata terdaftar resmi sebagai Penyelenggara Perjalanan Ibadah Umroh (PPIU) di Kementerian Agama. Anda dapat mengeceknya langsung di situs <a href="https://haji.kemenag.go.id/v5/?search=ppiu" target="_blank">simpu.kemenag.go.id</a>.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Apa saja jenis paket umroh yang tersedia?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Ajmal Noor Wisata menyediakan berbagai paket, seperti Umroh Reguler, Umroh Plus Turki, dan Umroh VIP. Fasilitas meliputi tiket pesawat PP, hotel bintang 4–5, transportasi bus AC, serta bimbingan manasik.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Berapa biaya total untuk paket umroh?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Biaya paket bervariasi tergantung pilihan dan musim keberangkatan. Harga sudah mencakup tiket, visa, hotel, makan 3x sehari, serta transportasi di Tanah Suci. Tidak ada biaya tersembunyi.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Apakah travel menyediakan bimbingan manasik?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Ya, seluruh jamaah akan mendapatkan bimbingan manasik sebelum keberangkatan agar memahami tata cara ibadah umroh sesuai tuntunan sunnah.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Bagaimana fasilitas hotel selama di Tanah Suci?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Hotel yang digunakan berada dekat dengan Masjidil Haram dan Masjid Nabawi. Kelas hotel disesuaikan dengan paket (bintang 4 atau 5) dan sudah termasuk sarapan, makan siang, serta makan malam.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Apakah ada asuransi perjalanan selama umroh?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Ya, setiap jamaah akan mendapatkan perlindungan asuransi perjalanan yang mencakup risiko kesehatan dan kecelakaan selama pelaksanaan ibadah.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Apakah ada pembimbing ibadah yang mendampingi?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Setiap kelompok didampingi oleh muthawif dan pembimbing ibadah berpengalaman yang siap membantu jamaah selama di Mekkah dan Madinah.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Bagaimana prosedur pengurusan visa umroh?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Visa umroh diurus langsung oleh pihak travel yang telah bekerja sama dengan mitra resmi di Arab Saudi. Jamaah cukup melengkapi dokumen sesuai panduan.</div>
+        </div>
+
+        <div class="ajmal-faq-item">
+            <div class="ajmal-faq-question">Bagaimana kebijakan pembatalan atau refund?<span class="ajmal-faq-toggle">+</span></div>
+            <div class="ajmal-faq-answer">Jika jamaah berhalangan berangkat, kebijakan refund mengikuti peraturan yang disepakati di kontrak pendaftaran, dengan potongan administrasi sesuai tahapan proses.</div>
+        </div>
+
+      <div class="ajmal-faq-footer text-center mt-4">✨ <b>Ajmal Noor Wisata</b> – Sahabat Ibadah Anda ✨</div>
+    </div>
+  </section>
+
   <section class="cta">
     <div class="container">
-      <h2 class="mb-3">Daftar Umroh 12 Hari atau Private Keluarga Sekarang!</h2>
+      <h2 class="mb-3">Daftar Umroh Sekarang!</h2>
       <p>Bersama Ajmal Noor Wisata – perjalanan ibadah Anda lebih tenang, aman, dan penuh makna.</p>
       <a href="https://wa.me/+6282210335285" class="btn mt-3">Hubungi via WhatsApp</a>
     </div>
@@ -210,34 +338,10 @@
     <p>&copy; 2025 Ajmal Noor Wisata | Travel Umroh Jakarta Resmi</p>
   </footer>
 
-  <!-- Schema Markup JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    "name": "Ajmal Noor Wisata",
-    "url": "https://www.ajmalnoorwisata.co.id",
-    "logo": "https://www.ajmalnoorwisata.co.id/logo.png",
-    "description": "Travel Umroh Jakarta resmi 2025 dengan paket umroh 9 hari, umroh 12 hari, dan umroh private keluarga. Pelayanan profesional, akomodasi nyaman, dan bimbingan ibadah lengkap.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Raya Haji No.123",
-      "addressLocality": "Jakarta Selatan",
-      "addressRegion": "DKI Jakarta",
-      "postalCode": "12540",
-      "addressCountry": "ID"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-812-3456-7890",
-      "contactType": "customer service",
-      "availableLanguage": ["Indonesian"]
-    },
-    "sameAs": [
-      "https://www.facebook.com/ajmalnoorwisata",
-      "https://www.instagram.com/ajmalnoorwisata"
-    ]
-  }
+  <script>
+    document.querySelectorAll('.ajmal-faq-item').forEach(item => {
+      item.addEventListener('click', () => item.classList.toggle('active'));
+    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
